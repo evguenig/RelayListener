@@ -3,9 +3,13 @@ RelayListener - monitor directory for new files creation and upload them to Http
 The key components of this application are:
 
 DirectoryMonitor: Monitors a specified directory for file creations and passes them to the Relay component for processing.
+
 Relay: Manages a pool of worker threads that handle file uploads. It ensures efficient and parallel processing.
+
 ThreadPool: Provides a thread pool for concurrent file upload tasks.
+
 HttpUploader: Contains functions for uploading files to a remote server over HTTP.
+
 For test purposes HttpServer is provided.
 
 Getting Started
@@ -25,6 +29,8 @@ If the upload fails, the file is moved to the "failed" directory for later inspe
 
 Dependencies
 
-C++ compiler (e.g., g++), c++20 is currently used. 
+C++ compiler (e.g., g++), c++20 is currently used.
+
 Standard C++ libraries
+
 POSIX threads (libpthread)
